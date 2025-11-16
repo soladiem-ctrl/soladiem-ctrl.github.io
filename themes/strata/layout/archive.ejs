@@ -1,0 +1,44 @@
+<%- partial('_partial/header') %>
+
+<div id="main">
+    <section id="archive">
+        <header>
+            <h1>Journal</h1>
+            <p>Behind-the-scenes stories, photography tips, and project highlights.</p>
+        </header>
+
+        <div class="posts">
+            <% page.posts.each(function(post) { %>
+                <article class="post-preview">
+                    <% if (post.cover) { %>
+                        <a href="<%- url_for(post.path) %>" class="image">
+                            <img src="<%- url_for(post.cover) %>" alt="<%= post.title %>" />
+                        </a>
+                    <% } %>
+                    <div class="content">
+                        <h2><a href="<%- url_for(post.path) %>"><%= post.title %></a></h2>
+                        <div class="meta">
+                            <time datetime="<%= post.date.toISOString() %>">
+                                <%= date(post.date, 'MMMM D, YYYY') %>
+                            </time>
+                        </div>
+                        <p><%- truncate(strip_html(post.content), {length: 150}) %></p>
+                        <a href="<%- url_for(post.path) %>" class="button">Read More</a>
+                    </div>
+                </article>
+            <% }); %>
+        </div>
+
+        <% if (page.total > 1) { %>
+            <nav class="pagination">
+                <%- paginator({
+                    prev_text: '<i class="fas fa-arrow-left"></i> Previous',
+                    next_text: 'Next <i class="fas fa-arrow-right"></i>',
+                    mid_size: 2
+                }) %>
+            </nav>
+        <% } %>
+    </section>
+</div>
+
+<%- partial('_partial/footer') %>

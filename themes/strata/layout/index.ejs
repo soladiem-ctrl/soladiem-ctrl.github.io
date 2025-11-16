@@ -1,0 +1,47 @@
+<%- partial('_partial/header') %>
+
+<div id="main">
+    <section id="hero">
+        <div class="hero-content">
+            <h1><%= config.title %></h1>
+            <p class="subtitle"><%= config.subtitle %></p>
+            <p><%= config.description %></p>
+        </div>
+    </section>
+
+    <section id="recent-work">
+        <h2>Recent Work</h2>
+        <div class="gallery">
+            <% site.posts.sort('date', -1).limit(6).each(function(post) { %>
+                <article class="work-item">
+                    <a href="<%- url_for(post.path) %>" class="image">
+                        <% if (post.cover) { %>
+                            <img src="<%- url_for(post.cover) %>" alt="<%= post.title %>" />
+                        <% } else { %>
+                            <img src="/images/placeholder.jpg" alt="<%= post.title %>" />
+                        <% } %>
+                    </a>
+                    <h3><a href="<%- url_for(post.path) %>"><%= post.title %></a></h3>
+                    <p><%- truncate(strip_html(post.content), {length: 100}) %></p>
+                </article>
+            <% }); %>
+        </div>
+        <ul class="actions">
+            <li><a href="/portfolio" class="button">View Full Portfolio</a></li>
+        </ul>
+    </section>
+
+    <section id="about-preview">
+        <h2>About</h2>
+        <p>
+            Passionate about capturing authentic moments and telling visual stories through photography. 
+            Specializing in lifestyle, editorial, and adventure photography with a focus on natural light 
+            and genuine connections.
+        </p>
+        <ul class="actions">
+            <li><a href="/about" class="button">Learn More</a></li>
+        </ul>
+    </section>
+</div>
+
+<%- partial('_partial/footer') %>

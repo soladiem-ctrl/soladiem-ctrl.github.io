@@ -1,0 +1,25 @@
+# Strata Theme Configuration
+
+# Sidebar
+avatar: /images/avatar.jpg
+bio: "Cinematic storytelling in natural light"
+
+# Social links (configured in main _config.yml)
+
+# Footer
+footer_text: "© 2025 Sol Adiem Photography. All rights reserved."
+
+# Gallery settings
+gallery:
+  columns: 3
+  gap: 20
+
+# Portfolio settings
+portfolio:
+  per_page: 12
+  categories:
+    - editorial
+    - lifestyle
+    - portraits
+    - travel
+    - adventure

@@ -1,0 +1,58 @@
+<%- partial('_partial/header') %>
+
+<div id="main">
+    <article class="post">
+        <header>
+            <h1><%= page.title %></h1>
+            <div class="meta">
+                <time datetime="<%= page.date.toISOString() %>">
+                    <%= date(page.date, 'MMMM D, YYYY') %>
+                </time>
+                <% if (page.categories && page.categories.length) { %>
+                    <span class="categories">
+                        <% page.categories.forEach(function(cat) { %>
+                            <a href="<%- url_for(cat.path) %>"><%= cat.name %></a>
+                        <% }); %>
+                    </span>
+                <% } %>
+            </div>
+        </header>
+
+        <% if (page.cover) { %>
+            <span class="image main">
+                <img src="<%- url_for(page.cover) %>" alt="<%= page.title %>" />
+            </span>
+        <% } %>
+
+        <div class="content">
+            <%- page.content %>
+        </div>
+
+        <% if (page.tags && page.tags.length) { %>
+            <footer>
+                <ul class="tags">
+                    <% page.tags.forEach(function(tag) { %>
+                        <li><a href="<%- url_for(tag.path) %>"><%= tag.name %></a></li>
+                    <% }); %>
+                </ul>
+            </footer>
+        <% } %>
+    </article>
+
+    <nav class="post-navigation">
+        <% if (page.prev) { %>
+            <a href="<%- url_for(page.prev.path) %>" class="prev">
+                <span class="label">Previous</span>
+                <%= page.prev.title %>
+            </a>
+        <% } %>
+        <% if (page.next) { %>
+            <a href="<%- url_for(page.next.path) %>" class="next">
+                <span class="label">Next</span>
+                <%= page.next.title %>
+            </a>
+        <% } %>
+    </nav>
+</div>
+
+<%- partial('_partial/footer') %>

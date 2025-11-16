@@ -1,0 +1,31 @@
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>Get in touch</h2>
+            <p>Interested in working together? I'd love to hear about your project.</p>
+            <ul class="actions">
+                <li><a href="/contact" class="button primary">Contact Me</a></li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+                <% if (config.social) { %>
+                    <% config.social.forEach(function(link) { %>
+                        <li>
+                            <a href="<%= link.url %>" class="icon" target="_blank" rel="noopener">
+                                <i class="<%= link.icon %>"></i>
+                                <span class="label"><%= link.label %></span>
+                            </a>
+                        </li>
+                    <% }); %>
+                <% } %>
+            </ul>
+        </section>
+        
+        <p class="copyright">
+            &copy; <%= new Date().getFullYear() %> <%= config.author %>. All rights reserved.
+        </p>
+    </div>
+</footer>
