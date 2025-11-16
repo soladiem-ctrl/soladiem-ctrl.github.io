@@ -20,9 +20,6 @@ I believe the best photographs come from genuine connections and authentic momen
 
 With years of experience in editorial, lifestyle, and adventure photography, I've had the privilege of working with diverse clients and telling their unique stories through photography.
 
-### Services
-
-From editorial shoots to personal portraits, I offer a range of photography services tailored to your needs. Whether you're looking for professional headshots, lifestyle photography, or creative editorial work, I'd love to discuss your vision.
 
 ### Let's Create Together
 

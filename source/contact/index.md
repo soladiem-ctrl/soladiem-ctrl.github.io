@@ -17,10 +17,8 @@ Drop me a line with details about your project, timeline, and any questions you 
 
 ### Connect
 
-Follow along for behind-the-scenes content, latest work, and photography inspiration:
+Follow along on this site for behind-the-scenes content, latest work, and photography inspiration:
 
-- **Instagram**: [@soladiem.photo](https://instagram.com/soladiem.photo)
-- **Behance**: [soladiem](https://www.behance.net/soladiem)
 
 ---
 

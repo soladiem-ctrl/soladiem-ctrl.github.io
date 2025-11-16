@@ -61,4 +61,4 @@ We came away with over 500 shots and a final selection of 25 images that perfect
 2. **Trust your team**: Working with talented creatives elevates the final result
 3. **Embrace challenges**: The wind and heat that seemed like obstacles became part of the story
 
-Check out the full gallery on my [portfolio page](/portfolio) and follow along on [Instagram](https://instagram.com/soladiem.photo) for more behind-the-scenes content!
+Check out the full gallery on my [portfolio page](/portfolio) for more behind-the-scenes content!
